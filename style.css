@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 20px;
+  margin: 10px;
+}
+header h1 {
+  font-size: 48px;
+}
+header h3 {
+  font-size: 17px;
+}
+header h1, header h3 {
+  padding-bottom: 20px;
+}
+
+main .aboutMe {
+  padding: 20px;
+  margin: 10px;
+}
+main .aboutMe .aboutMe-heading {
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+}
+main .aboutMe .aboutMe-image {
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+main .aboutMe .aboutMe-infoParagraph {
+  padding: 10px;
+  font-size: 20px;
+}
+main .technicalSkills {
+  padding: 20px;
+  margin: 10px;
+}
+main .technicalSkills .technicalSkills-heading {
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+}
+main .technicalSkills .technicalSkills-infoTechnical {
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 20px;
+}
+main .technicalSkills .technicalSkills-grid {
+  display: grid;
+  padding: 10px;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  height: 30vh;
+}
+main .myProjects {
+  padding: 20px;
+  margin: 10px;
+}
+main .myProjects .myProjects-heading {
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background-color: grey;
+  height: auto;
+  color: white;
+}
+footer .footer-grid--images {
+  padding-bottom: 30px;
+}/*# sourceMappingURL=style.css.map */
