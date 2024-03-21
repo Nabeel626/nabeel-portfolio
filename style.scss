@@ -8,9 +8,75 @@
     font-family: $font-primary;
 }
 
+nav {
+
+    .navigation-heading {
+        float:left;
+    }
+
+    ul {
+        color: $color-secondary;
+        background-color: #b3b3b3;
+        padding: 40px 30px;
+        width: 100%;
+        height: auto;
+        text-decoration: none;
+    }
+
+    li {
+        position: relative;
+        top: -1.5em;
+        list-style-type: none;
+        cursor: pointer;
+        font-weight: bold;
+        float: right;
+    }
+
+    li.dropdownMenu {
+        display: inline-block;
+    }
+
+    .dropdownButton, a {
+        display: inline-block;
+        color: $color-secondary;
+        font-family: $font-primary;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .dropdownButton-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+      
+    .dropdownButton-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+
+        &:hover {
+            background-color: grey;
+            color: $color-primary;
+        }
+    }
+
+    .dropdownMenu:hover .dropdownButton-content {
+        display: block;
+    }
+}
+
 header {
-    padding: 20px;
-    margin: 10px;
+    padding: 40px;
+    height: auto;
+    width: 100%;
+    background-color: lightgray;
 
     h1 {
         font-size: 48px;
@@ -23,10 +89,6 @@ header {
     h1, h3 {
         padding-bottom: 20px;
     }
-}
-
-nav {
-    display: none;
 }
 
 main {
@@ -55,7 +117,7 @@ main {
 
     .technicalSkills {
         padding: 20px;
-        margin: 10px;
+        background-color: lightgrey;
 
         .technicalSkills-heading {
             font-size: 25px;
@@ -104,7 +166,7 @@ main {
 
     .myProjects-heading {
         font-size: 25px;
-        padding: 10px;
+        padding: 50px 10px 10px 10px;
         text-align: center;
     }
 
@@ -137,9 +199,9 @@ main {
         }
 
         .myProjects-display--button {
-            border: 2px solid black;
-            color: black;
-            background-color: white;
+            border: 2px solid $color-secondary;
+            color: $color-secondary;
+            background-color: $color-primary;
             font-weight: bold;
             padding: 10px 20px;
             text-align: center;
@@ -153,7 +215,7 @@ main {
             transition: transform .2s;
 
             &:hover {
-                background-color: black;
+                background-color: $color-secondary;
                 color: $color-primary;
                 transform:scale(1.1);
             }
@@ -165,14 +227,12 @@ main {
     }
 }
 
-
-
 footer {
     padding: 30px;
     text-align: center;
-    background-color: grey;
+    background-color: lightgrey;
     height: auto;
-    color: white;
+    color: $color-primary;
 
     .footer-grid {
         display: grid;
@@ -190,7 +250,7 @@ footer {
     }
 
     h3 {
-        color: black;
+        color: $color-secondary;
         font-size: 20px;
     }
 }
