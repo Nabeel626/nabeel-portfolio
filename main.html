@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://js.cx/libs/animate.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <title>Nabeel's Portfolio</title>
 
 </head>
 <body>
-    
+
     <nav>
         <ul>
-            <li class="navigation-heading"><a>Nabeel Bloggings</a></li>
+            <li class="navigation-heading" id="headerButton"><a>Nabeel Bloggings</a></li>
+            <li class="navigation-heading--section">
+                <a class="active" href="">Home</a>
+                <a href="">About</a>
+                <a href="">Projects</a>
+            </li>
+
+
             <li class="navigation-button">
                 <a href="">Get in Touch</a>
             </li>
@@ -32,6 +39,8 @@
     <header>
         <h3>👋 Hey! I’m Nabeel's Bloggings 🙂</h3>
         <h1>A Junior Software Developer based in the UK.</h1>
+        <button class="header-button">⇩ Take a look at my work ⇩</button>
+        
     </header>
 
     <main>
@@ -205,5 +214,35 @@
         <h3>nabeel92914@outlook.com</h3>
     </footer>
 
+    <script>
+        
+        function makeEaseOut(timing) {
+            return function(timeFraction) {
+                return 1 - timing(1 - timeFraction);
+            }
+        }
+
+        function bounce(timeFraction) {
+            for (let a = 0, b = 1; 1; a += b, b /= 2) {
+                if (timeFraction >= (7 - 4 * a) / 11) {
+                return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                }
+            }
+        }
+
+        let bounceEaseOut = makeEaseOut(bounce);
+
+        headerButton.onclick = function() {
+            animate({
+                duration: 4000,
+                timing: bounceEaseOut,
+                draw: function(progress) {
+                    headerButton.style.left = progress * 750 + 'px';
+                }
+            });
+        };
+
+      </script>
+    
 </body>
 </html>
