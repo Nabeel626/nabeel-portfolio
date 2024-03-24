@@ -11,6 +11,9 @@
 
 //MOBILE VERSION
 nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 
     .navigation-heading {
         float:left;
@@ -102,10 +105,10 @@ nav {
 }
 
 header {
-    padding: 40px;
+    padding: 150px 40px 90px;  
     height: auto;
     width: 100%;
-    background-color: lightgray;
+    background-color: $color-grey;
 
     h1 {
         font-size: 48px;
@@ -120,6 +123,10 @@ header {
     }
 
     .header-button {
+        display: none;
+    }
+
+    .header-shape1, .header-shape2 {
         display: none;
     }
 }
@@ -281,6 +288,10 @@ footer {
         }
     }
 
+    .footer-backToTop {
+        display: none;
+    }
+
     h3 {
         color: $color-secondary;
         font-size: 20px;
@@ -351,7 +362,7 @@ footer {
     header {
         text-align: center;
         color: $color-secondary;
-        padding: 100px;
+        padding: 150px 100px 10px;
         height: auto;
         width: 100%;
 
@@ -367,7 +378,7 @@ footer {
         .header-button {
             border: 2px solid $color-secondary;
             color: $color-secondary;
-            background-color: lightgray;
+            background-color: $color-grey;
             font-weight: bold;
             padding: 18px 30px;
             text-align: center;
@@ -383,6 +394,30 @@ footer {
             }
         }
 
+        .header-shape1 {
+            position: relative;
+            display: block;
+            bottom: 5.5em;
+            left: 1em;
+            border-bottom: 80px solid $color-primary;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            transform: rotate(180deg);
+            height: 0;
+            width: 80vw;
+        }
+
+        .header-shape2 {
+            position: relative;
+            display: block;
+            top: 3em;
+            left: 1em;
+            border-bottom: 80px solid $color-primary;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            height: 0;
+            width: 80vw;
+        }
     }
 
     main {        
@@ -436,12 +471,12 @@ footer {
     
             .technicalSkills-grid {
                 display: grid;
-                padding: 5px 150px;
-                font-size: 1.1vw;
+                padding: 5px 3vw;
+                font-size: 1.4vw;
                 text-align: center;
                 grid-template-columns: 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;
                 grid-template-rows: 1fr;
-                gap: 1px;
+                gap: 20px;
                 height: auto;
     
                 .technicalSkills-grid--image {
@@ -511,6 +546,13 @@ footer {
         .footer-backToTop {
             grid-area: backtotop;
             font-size: 1.5vw;
+            display: block;
+            
+            a {
+                text-decoration: none;
+                color: $color-secondary;
+            }
+            
         }
 
         .footer-verticalLine1 {
