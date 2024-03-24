@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://js.cx/libs/animate.js"></script>
+
+
+    <script src="https://js.cx/libs/animate.js"></script> <!--This grabs the library for the animation to function-->
     <link rel="stylesheet" href="style.css">
 
     <title>Nabeel's Portfolio</title>
@@ -11,6 +13,7 @@
 </head>
 <body>
 
+    <!-- NAVIGATION SECTION -->
     <nav>
         <ul>
             <li class="navigation-heading" id="headerButton"><a>Nabeel Bloggings</a></li>
@@ -36,15 +39,22 @@
 
     </nav>
 
+
+    <!-- HEADER SECTION -->
+
     <header>
+        
         <h3>👋 Hey! I’m Nabeel's Bloggings 🙂</h3>
         <h1>A Junior Software Developer based in the UK.</h1>
         <button class="header-button">⇩ Take a look at my work ⇩</button>
         
     </header>
 
+
+    <!-- MAIN SECTION / BODY CONTENT SECTION -->
+
     <main>
-        <section class="aboutMe">
+        <section class="aboutMe"> <!-- ABOUT ME  -->
             <h3 class="aboutMe-heading">About Me</h3>
 
             <img class="aboutMe-image" src="./images/nabeel-image.jpeg" alt="Nabeel Image">
@@ -68,7 +78,7 @@
             </p>
         </section>
 
-        <section class="technicalSkills">
+        <section class="technicalSkills"> <!-- TECHNICAL SKILLS ME  -->
             <h3 class="technicalSkills-heading">Technical Skills</h3>
             <p class="technicalSkills-infoTechnical">Skilled in Java, HTML, CSS, JavaScript, 
                 React, Git, SCSS and more. I bring a versatile toolkit to the table. From crafting 
@@ -120,7 +130,7 @@
 
         <h3 class="myProjects-heading">My Projects</h3>
 
-        <section class="myProjects">
+        <section class="myProjects"> <!-- PROJECTS THAT I HAVE DONE  -->
             
             <div class="myProjects-display--v1">
                 <img class="myProjects-display--image" src="./images/desktop-coding-image.jpg" alt="Coding Image">
@@ -204,6 +214,9 @@
 
     </main>
 
+
+    <!-- FOOTER SECTION -->
+
     <footer>
         <div class="footer-grid">
             <a href="https://www.linkedin.com/in/nabeel-iqbal-khan-050/"><img class="footer-grid--images" src="./images/linkedin-icon.svg" alt="linkedIn"></a>
@@ -225,7 +238,7 @@
         const bounce = (timeFraction) => { //This ensures that the timing of the bounce and duration is caluclated when clicking on the variable 
             for (let a = 0, b = 1; 1; a += b, b /= 2) {
                 if (timeFraction >= (7 - 4 * a) / 11) {
-                return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                    return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
                 }
             }
         }
@@ -245,7 +258,7 @@
 
 
         window.addEventListener("resize", function(event) {
-            location.reload();
+            location.reload(); //This refreshes the webpage every time the screen is adjusted
 
             // console.log("The width of the document is " + document.body.clientWidth);
         })

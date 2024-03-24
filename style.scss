@@ -388,8 +388,7 @@ footer {
     main {        
         .aboutMe {
             display: grid;
-            padding: 80px 80px 80px;
-            font-size: 20px;
+            padding: 10px 80px 10px;
             grid-template-areas: 
             "header image"
             "paragraph image";
@@ -397,24 +396,24 @@ footer {
             height: auto;
 
             .aboutMe-heading {
+                font-size: 3vw;
+                position: relative;
+                top: 7.5vw;
+                text-align: center;
                 grid-area: header;
             }
             
             .aboutMe-infoParagraph {
                 padding: 30px;
+                position: relative;
+                font-size: 1.6vw;
                 grid-area: paragraph;
             }
             
             .aboutMe-image {
-                padding: 30px;
+                width: 100%;
+                padding: 10vw 1vw;
                 grid-area: image;
-            }
-
-            .aboutMe-heading {
-                font-size: 30px;
-                position: relative;
-                top: 1em;
-                text-align: center;
             }
 
         }
@@ -424,7 +423,7 @@ footer {
             background-color: lightgrey;
     
             .technicalSkills-heading {
-                font-size: 25px;
+                font-size: 30px;
                 padding: 10px;
                 text-align: center;
             }
@@ -438,7 +437,7 @@ footer {
             .technicalSkills-grid {
                 display: grid;
                 padding: 5px 150px;
-                font-size: 15px;
+                font-size: 1.1vw;
                 text-align: center;
                 grid-template-columns: 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;
                 grid-template-rows: 1fr;
@@ -462,11 +461,12 @@ footer {
                 }
     
                 .technicalSkills-grid--imageJava {
-                    margin-left: 31px;
+                    margin-left: 2.1vw;
                 }
             }
         }
         .myProjects-heading {
+            font-size: 30px;
             padding-top: 80px;
 
         }

@@ -316,35 +316,35 @@ footer h3 {
   }
   main .aboutMe {
     display: grid;
-    padding: 80px 80px 80px;
-    font-size: 20px;
+    padding: 10px 80px 10px;
     grid-template-areas: "header image" "paragraph image";
     gap: 10px;
     height: auto;
   }
   main .aboutMe .aboutMe-heading {
+    font-size: 3vw;
+    position: relative;
+    top: 7.5vw;
+    text-align: center;
     grid-area: header;
   }
   main .aboutMe .aboutMe-infoParagraph {
     padding: 30px;
+    position: relative;
+    font-size: 1.6vw;
     grid-area: paragraph;
   }
   main .aboutMe .aboutMe-image {
-    padding: 30px;
+    width: 100%;
+    padding: 10vw 1vw;
     grid-area: image;
-  }
-  main .aboutMe .aboutMe-heading {
-    font-size: 30px;
-    position: relative;
-    top: 1em;
-    text-align: center;
   }
   main .technicalSkills {
     padding: 80px 100px;
     background-color: lightgrey;
   }
   main .technicalSkills .technicalSkills-heading {
-    font-size: 25px;
+    font-size: 30px;
     padding: 10px;
     text-align: center;
   }
@@ -356,7 +356,7 @@ footer h3 {
   main .technicalSkills .technicalSkills-grid {
     display: grid;
     padding: 5px 150px;
-    font-size: 15px;
+    font-size: 1.1vw;
     text-align: center;
     grid-template-columns: 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr;
     grid-template-rows: 1fr;
@@ -377,9 +377,10 @@ footer h3 {
     padding-top: 15px;
   }
   main .technicalSkills .technicalSkills-grid .technicalSkills-grid--imageJava {
-    margin-left: 31px;
+    margin-left: 2.1vw;
   }
   main .myProjects-heading {
+    font-size: 30px;
     padding-top: 80px;
   }
   main .myProjects {
