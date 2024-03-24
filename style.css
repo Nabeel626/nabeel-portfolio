@@ -395,9 +395,39 @@ footer h3 {
   main .myProjects .myProjects-display--v4, main .myProjects .myProjects-display--v5, main .myProjects .myProjects-display--v6 {
     display: block;
   }
-  footer .footer-grid {
+  footer {
+    display: grid;
+    grid-template-areas: "email gitImage backtotop";
+    gap: 10px;
+    padding: 0px 70px;
     height: auto;
+    align-items: center;
+  }
+  footer .footer-grid {
+    width: 35%;
     margin: auto;
-    width: 20%;
+    position: relative;
+    right: 0.2em;
+    grid-area: gitImage;
+  }
+  footer .footer-email {
+    grid-area: email;
+    font-size: 1.5vw;
+  }
+  footer .footer-backToTop {
+    grid-area: backtotop;
+    font-size: 1.5vw;
+  }
+  footer .footer-verticalLine1 {
+    border-left: 3px solid black;
+    height: 40px;
+    position: absolute;
+    left: 35%;
+  }
+  footer .footer-verticalLine2 {
+    border-left: 3px solid black;
+    height: 40px;
+    position: absolute;
+    left: 75%;
   }
 }/*# sourceMappingURL=style.css.map */

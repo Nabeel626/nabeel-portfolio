@@ -487,10 +487,44 @@ footer {
     }
 
     footer {
+        display: grid;
+        grid-template-areas: 
+            "email gitImage backtotop";
+        gap: 10px;
+        padding: 0px 70px;
+        height: auto;
+        align-items: center;
+
         .footer-grid {
-            height: auto;
+            width: 35%;
             margin: auto;
-            width: 20%;
+            position: relative;
+            right: 0.2em;
+            grid-area: gitImage;
+        }
+
+        .footer-email {
+            grid-area: email;
+            font-size: 1.5vw;
+        }
+
+        .footer-backToTop {
+            grid-area: backtotop;
+            font-size: 1.5vw;
+        }
+
+        .footer-verticalLine1 {
+            border-left: 3px solid black;
+            height: 40px;
+            position: absolute;
+            left: 35%;
+        }
+
+        .footer-verticalLine2 {
+            border-left: 3px solid black;
+            height: 40px;
+            position: absolute;
+            left: 75%;
         }
     }
 
