@@ -1,4 +1,6 @@
 
+//BOUNCE AND TIMING FOR NAV NAME
+
 const makeEaseOut = (timing) => { //This creates a timing for how long the duration is
     return function(timeFraction) {
         return 1 - timing(1 - timeFraction);
@@ -26,6 +28,12 @@ headerButton.onclick = function() { //This function animates the header name whe
     });
 };
 
+
+
+
+
+
+//REFRESH CONTENT EACH TIME WINDOW IS RESIZED
 
 window.addEventListener("resize", function(event) {
     location.reload(); //This refreshes the webpage every time the screen is adjusted
