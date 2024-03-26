@@ -22,8 +22,14 @@ headerButton.onclick = function() { //This function animates the header name whe
         duration: 4000, 
         timing: bounceEaseOut, //The timing is to ease out of the current place
         draw: function(progress) {
-            headerButton.style.left = progress * (document.body.clientWidth - 470) + 'px';
-            //This checks the progress of the animation and then calcualtes the width of desktop/ mobile and bounces accordingly
+
+            if(document.body.clientWidth > 500 && document.body.clientWidth < 700) {
+                headerButton.style.left = progress * (document.body.clientWidth - 420) + 'px';
+                //This checks the progress of the animation and then calcualtes the width of desktop/ mobile and bounces accordingly
+            } else if(document.body.clientWidth > 700) {
+                headerButton.style.left = progress * (document.body.clientWidth - 620) + 'px';
+                //This checks the progress of the animation and then calcualtes the width of desktop/ mobile and bounces accordingly
+            }
         }
     });
 };

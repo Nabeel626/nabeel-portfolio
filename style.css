@@ -257,6 +257,7 @@ footer h3 {
   nav .navigation-heading--section {
     display: block;
     float: right;
+    padding-right: 20px;
   }
   nav .navigation-heading--section a {
     position: relative;
@@ -290,9 +291,6 @@ footer h3 {
   nav .navigation-heading--section a:hover:after {
     transform: translate(0, 0);
     opacity: 1;
-  }
-  nav .navigation-button {
-    display: none;
   }
   header {
     text-align: center;
